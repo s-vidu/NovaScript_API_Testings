@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "bd4f020b-c15c-443f-bf01-3b441f78f393",
+		"name": "NovaScript Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46904115",
+		"_collection_link": "https://vidumalidahanayake.postman.co/workspace/NovaScript~3268fc8c-d577-41d0-b362-893b94ff5da7/collection/46904115-bd4f020b-c15c-443f-bf01-3b441f78f393?action=share&source=collection_link&creator=46904115"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"full_name\": \"kusal\",\r\n  \"email\": \"kusal@example.com\",\r\n  \"phone\": \"0771234577\",\r\n  \"password\": \"1234\",\r\n  \"confirm_password\": \"1234\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"kusal@example.com\",\r\n  \"password\": \"1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDg0NjBkOGUwMGYyNGM4ZGRkMjk5ZiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDA0MTgyLCJleHAiOjE3NTkwMDc3ODJ9.X9JGNiHHq0Ra7lN9giib7GwN9S79oY-cUdysBU945Xs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDg0NjBkOGUwMGYyNGM4ZGRkMjk5ZiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDA0MTgyLCJleHAiOjE3NTkwMDc3ODJ9.X9JGNiHHq0Ra7lN9giib7GwN9S79oY-cUdysBU945Xs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"full_name\": \"kusal Updated\",\r\n  \"email\": \"kusal2@example.com\",\r\n  \"phone\": \"0771234577\",\r\n  \"currentPassword\": \"1234\",\r\n  \"newPassword\": \"67891\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all surveys",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/surveys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"surveys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Survey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Students Feedback Survey\",\r\n  \"description\": \"A short survey to collect feedback from students\",\r\n  \"questions\": [\r\n    {\r\n      \"text\": \"What is your favorite subject?\",\r\n      \"type\": \"text\",\r\n      \"options\": []\r\n    },\r\n    {\r\n      \"text\": \"How do you prefer to study?\",\r\n      \"type\": \"multiple-choice\",\r\n      \"options\": [\"Online\", \"In-person\", \"Hybrid\"]\r\n    },\r\n    {\r\n      \"text\": \"Which programming languages have you learned?\",\r\n      \"type\": \"checkbox\",\r\n      \"options\": [\"JavaScript\", \"Python\", \"Java\", \"C#\"]\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/surveys/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"surveys",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Response",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"responses\": {\r\n    \"0\": \"Mathematics\",\r\n    \"1\": \"Online\",\r\n    \"2\": [\"Python\", \"JavaScript\"]\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/surveys/68d846668e00f24c8ddd2a14/respond",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"surveys",
+						"68d846668e00f24c8ddd2a14",
+						"respond"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Survey Responses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"responses\": {\r\n    \"0\": \"Mathematics\",\r\n    \"1\": \"Online\",\r\n    \"2\": [\"Python\", \"JavaScript\"]\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/surveys/68d846668e00f24c8ddd2a14/responses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"surveys",
+						"68d846668e00f24c8ddd2a14",
+						"responses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Survey Analytics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"responses\": {\r\n    \"0\": \"Mathematics\",\r\n    \"1\": \"Online\",\r\n    \"2\": [\"Python\", \"JavaScript\"]\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/surveys/68d846668e00f24c8ddd2a14/analytics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"surveys",
+						"68d846668e00f24c8ddd2a14",
+						"analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Research Project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"AI-Driven Research Management System\",\r\n  \"description\": \"A platform to manage research projects and surveys.\",\r\n  \"researchField\": \"Computer Science\",\r\n  \"methodology\": \"Agile and iterative development\",\r\n  \"expectedDuration\": \"6 months\",\r\n  \"objectives\": [\"Develop core features\", \"Integrate AI assistant\"],\r\n  \"keywords\": [\"AI\", \"Research\", \"Surveys\"],\r\n  \"collaborators\": [\"Hasini\", \"Yasith\"],\r\n  \"startDate\": \"2025-10-01\",\r\n  \"endDate\": \"2026-03-01\",\r\n  \"status\": \"planning\",\r\n  \"estimatedBudget\": 50000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/research-projects/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"research-projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Research Projects",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/research-projects/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"research-projects",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Research Project Stats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/research-projects/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"research-projects",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Research project by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"AI-Driven Research Management System\",\r\n  \"description\": \"A platform to manage research projects and surveys.\",\r\n  \"researchField\": \"Computer Science\",\r\n  \"methodology\": \"Agile and iterative development\",\r\n  \"expectedDuration\": \"6 months\",\r\n  \"objectives\": [\"Develop core features\", \"Integrate AI assistant\"],\r\n  \"keywords\": [\"AI\", \"Research\", \"Surveys\"],\r\n  \"collaborators\": [\"Hasini\", \"Yasith\"],\r\n  \"startDate\": \"2025-10-01\",\r\n  \"endDate\": \"2026-03-01\",\r\n  \"status\": \"planning\",\r\n  \"estimatedBudget\": 50000\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/research-projects/68d846b38e00f24c8ddd2a30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"research-projects",
+						"68d846b38e00f24c8ddd2a30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Research Project",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated AI Research Project\",\r\n  \"status\": \"active\",\r\n  \"estimatedBudget\": 750009\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/research-projects/68d846b38e00f24c8ddd2a30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"research-projects",
+						"68d846b38e00f24c8ddd2a30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Research Project Timeline",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDgzYTg4OGUwMGYyNGM4ZGRkMjdiYiIsInJvbGUiOiJyZXNlYXJjaGVyIiwiaWF0IjoxNzU5MDAxMjMxLCJleHAiOjE3NTkwMDQ4MzF9.fWh1ZugwchDhy_1wvck-FtOT-0Ps52BValesxGm69Kw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"timeline\": {\r\n    \"phases\": {\r\n      \"projectPlanning\": { \"title\": \"Project Planning\", \"duration\": 15, \"saved\": true },\r\n      \"researchPhase\": { \"title\": \"Research Phase\", \"duration\": 30, \"saved\": true },\r\n      \"dataCollection\": { \"title\": \"Data Collection\", \"duration\": 45, \"saved\": true },\r\n      \"analysisPhase\": { \"title\": \"Analysis Phase\", \"duration\": 25, \"saved\": true },\r\n      \"finalReport\": { \"title\": \"Final Report\", \"duration\": 20, \"saved\": true }\r\n    },\r\n    \"totalDuration\": 130,\r\n    \"startDate\": \"2025-10-01\",\r\n    \"endDate\": \"2026-03-01\"\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/research-projects/68d846b38e00f24c8ddd2a30/timeline",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"research-projects",
+						"68d846b38e00f24c8ddd2a30",
+						"timeline"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
