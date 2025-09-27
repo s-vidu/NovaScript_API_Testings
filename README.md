@@ -4,5 +4,5 @@ Postman-based API testing for NovaScript, a full-stack research management platf
 
 ## Demo Video
 
-[![Watch the demo]](src/demo.mp4)
+[![Watch the demo](src/demo_thumbnail.png)](src/demo.mp4)
 
